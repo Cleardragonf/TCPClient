@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Entities>
+	<Hostile>
+		<Entity name="Goblin">
+			<Location>
+				<type>Plains</type>
+				<type>Mountains</type>
+			</Location>
+			<Attack max="10" min="1"/>
+			<Defense max="10" min="1" />
+			<HP max="10" min="1"/>
+			<Speed max="2" min="1" />
+			<CanBlock bool="false" />
+			<CanDodge bool="true" />
+			<CanRetaliate bool="true" />
+			<Energy max="5" min="1" />
+		</Entity>
+		<Entity name="Leprachan">
+			<Location>
+				<type>Forest</type>
+				<type>Plains</type>
+			</Location>
+			<Attack max="10" min="1"/>
+			<Defense max="10" min="1" />
+			<HP max="10" min="1"/>
+			<Speed max="3" min="1" />
+			<CanBlock bool="false" />
+			<CanDodge bool="true" />
+			<CanRetaliate bool="true" />
+			<Energy max="5" min="1" />
+		</Entity>
+		<Entity name="Dwarf">
+			<Location>
+				<type>Forest</type>
+				<type>Plains</type>
+				<type>Mountains</type>
+			</Location>
+			<HP max="10" min="1" />
+			<Attack max="10" min="1"/>
+			<Defense max="10" min="1" />
+			<Speed max="3" min="1" />
+			<CanBlock bool="false" />
+			<CanDodge bool="true" />
+			<CanRetaliate bool="true" />
+			<Energy max="5" min="1" />
+		</Entity>
+	</Hostile>
+	<Passive>
+		
+	</Passive>
+	<Neutral>
+		
+	</Neutral>
+</Entities>

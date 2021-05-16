@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+	<Environments>
+		<Environment name="Forest"/>
+		<Environment name="Mountains"/>
+		<Environment name="Plains"/>
+		<Environment name="Desert"/>
+		<Environment name="Hills"/>
+		<Environment name="Swamp"/>
+	</Environments>
+</Config>

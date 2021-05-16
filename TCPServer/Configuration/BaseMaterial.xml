@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Materials>
+	<Weapons>
+		<type name="Iron" max_attack="3" min_attack="1" max_durability="3" min_durability="1"/>
+		<type name="Brass" max_attack="3" min_attack="1" max_durability="3" min_durability="1"/>
+		<type name="Bronze" max_attack="3" min_attack="1" max_durability="3" min_durability="1"/>
+		<type name="Copper" max_attack="3" min_attack="1" max_durability="3" min_durability="1"/>
+		<type name="Gold" max_attack="3" min_attack="1" max_durability="3" min_durability="1"/>
+		<type name="Silver" max_attack="3" min_attack="1" max_durability="3" min_durability="1"/>
+		<type name="Tin" max_attack="3" min_attack="1" max_durability="3" min_durability="1"/>
+		<type name="Steel" max_attack="3" min_attack="1" max_durability="3" min_durability="1"/>
+	</Weapons>
+	<Items>
+		
+	</Items>
+	<Armor>
+		
+	</Armor>
+</Materials>

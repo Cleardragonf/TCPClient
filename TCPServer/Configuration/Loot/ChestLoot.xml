@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Loot>
+	<Material>
+		<type name="Iron" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Brass" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Bronze" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Copper" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Electrum" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Gold" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Mithral" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Platinum" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Silver" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Steel" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Adamantine" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Cold Iron" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Lead" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Tin" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Star Metal" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Adamant" HP="1" defense="1" attack="1" durability="1" />
+		
+	</Material>*
+	<Books>
+		
+	</Books>
+	<Weapons>
+		<type name="Dagger" HP="1" defense="1" attack="1" durability="1" />
+		<type name="sword" HP="1" defense="1" attack="1" durability="1" />
+	</Weapons>
+	<Items>
+		
+	</Items>
+	<Money>
+		<type name="Copper Piece" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Electrum Piece" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Silver Piece" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Gold Piece" HP="1" defense="1" attack="1" durability="1" />
+		<type name="Platinum Piece" HP="1" defense="1" attack="1" durability="1" />
+	</Money>
+</Loot>

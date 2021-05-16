@@ -1,0 +1,187 @@
+<Dungeons>
+  <Dungeon05162021172412>
+    <Room_12 length="1" width="1">
+      <Chest exp="50">
+        <contents>
+          <book name="The Almighty Book" />
+          <book name="Book of Attributes" />
+          <book name="Book of Class" />
+          <money Amount="83 Copper" />
+          <money Amount="58 Gold" />
+          <weapon name="Bronze Halberd" attack="2" durability="1" />
+          <book name="Book of Skills" />
+          <weapon name="Steel WarHammer" attack="1" durability="1" />
+          <weapon name="Brass Mace" attack="2" durability="2" />
+          <weapon name="Tin Pike" attack="1" durability="1" />
+        </contents>
+      </Chest>
+      <Entity name="Leprachan" id="0" attack="60" defense="90" HP="10" speed="20" CanBlock="False" CanDodge="True" CanRetaliate="True" Energy="50" exp="13" />
+    </Room_12>
+    <Room_11 length="3" width="3">
+      <Chest exp="50">
+        <contents>
+          <money Amount="85 silver" />
+          <book name="Book of Attributes" />
+          <book name="Book of Skills" />
+          <book name="The Almighty Book" />
+          <weapon name="Bronze Saber" attack="1" durability="2" />
+          <weapon name="Iron WarHammer" attack="2" durability="2" />
+          <weapon name="Brass Dagger" attack="2" durability="2" />
+          <book name="Book of Attributes" />
+          <money Amount="36 Electrum" />
+          <weapon name="Copper WarHammer" attack="1" durability="1" />
+        </contents>
+      </Chest>
+      <Entity name="Dwarf" id="0" HP="40" attack="20" defense="20" speed="20" CanBlock="False" CanDodge="True" CanRetaliate="False" Energy="50" exp="5" />
+    </Room_11>
+    <Room_10 length="3" width="3">
+      <Chest exp="50">
+        <contents>
+          <money Amount="87 Platinum" />
+          <book name="Book of Skills" />
+          <book name="Book of Attributes" />
+          <weapon name="Brass Mace" attack="1" durability="2" />
+          <weapon name="Bronze Dagger" attack="1" durability="2" />
+          <book name="The Almighty Book" />
+          <weapon name="Bronze Pike" attack="1" durability="2" />
+          <book name="Book of Class" />
+          <weapon name="Silver Saber" attack="1" durability="1" />
+          <weapon name="Copper WarHammer" attack="1" durability="1" />
+        </contents>
+      </Chest>
+      <Entity name="Leprachan" id="0" attack="10" defense="30" HP="30" speed="20" CanBlock="True" CanDodge="True" CanRetaliate="False" Energy="40" exp="6" />
+      <Entity name="Leprachan" id="1" attack="20" defense="80" HP="30" speed="20" CanBlock="False" CanDodge="False" CanRetaliate="True" Energy="30" exp="8" />
+    </Room_10>
+    <Room_9 length="3" width="3">
+      <Chest exp="50">
+        <contents>
+          <book name="The Almighty Book" />
+          <book name="Book of Skills" />
+          <weapon name="Brass Bow" attack="2" durability="2" />
+          <book name="Book of Attributes" />
+          <weapon name="Silver Mace" attack="1" durability="2" />
+          <weapon name="Steel Halberd" attack="1" durability="1" />
+          <book name="Book of Class" />
+          <weapon name="Brass Bow" attack="2" durability="1" />
+          <money Amount="87 silver" />
+          <money Amount="72 Copper" />
+        </contents>
+      </Chest>
+      <Entity name="Leprachan" id="0" attack="50" defense="30" HP="80" speed="20" CanBlock="False" CanDodge="False" CanRetaliate="False" Energy="10" exp="15" />
+      <Entity name="Leprachan" id="1" attack="10" defense="40" HP="30" speed="10" CanBlock="True" CanDodge="False" CanRetaliate="True" Energy="10" exp="9" />
+      <Entity name="Dwarf" id="2" HP="30" attack="80" defense="10" speed="30" CanBlock="False" CanDodge="True" CanRetaliate="True" Energy="20" exp="17" />
+      <Entity name="Dwarf" id="3" HP="60" attack="20" defense="50" speed="30" CanBlock="False" CanDodge="True" CanRetaliate="True" Energy="10" exp="14" />
+      <Entity name="Leprachan" id="4" attack="30" defense="40" HP="50" speed="30" CanBlock="False" CanDodge="True" CanRetaliate="True" Energy="20" exp="11" />
+    </Room_9>
+    <Room_8 length="3" width="3">
+      <Chest exp="50">
+        <contents>
+          <book name="Book of Class" />
+          <book name="Book of Attributes" />
+          <money Amount="68 Electrum" />
+          <money Amount="22 Electrum" />
+          <book name="The Almighty Book" />
+          <weapon name="Gold Dagger" attack="2" durability="2" />
+          <money Amount="72 Platinum" />
+          <money Amount="95 silver" />
+          <book name="Book of Attributes" />
+          <book name="The Almighty Book" />
+        </contents>
+      </Chest>
+      <Entity name="Leprachan" id="0" attack="50" defense="20" HP="20" speed="10" CanBlock="True" CanDodge="False" CanRetaliate="True" Energy="20" exp="11" />
+      <Entity name="Leprachan" id="1" attack="30" defense="40" HP="60" speed="20" CanBlock="True" CanDodge="False" CanRetaliate="False" Energy="10" exp="13" />
+    </Room_8>
+    <Room_7 length="3" width="3">
+      <Chest exp="50">
+        <contents>
+          <weapon name="Brass Bow" attack="1" durability="1" />
+          <book name="Book of Skills" />
+          <weapon name="Brass Arrow" amount="90" attack="2" durability="2" />
+          <book name="The Almighty Book" />
+          <book name="Book of Attributes" />
+          <weapon name="Brass Mace" attack="2" durability="1" />
+          <money Amount="81 silver" />
+          <weapon name="Steel Arrow" amount="29" attack="2" durability="1" />
+          <money Amount="73 Copper" />
+          <money Amount="4 silver" />
+        </contents>
+      </Chest>
+      <Entity name="Dwarf" id="0" HP="80" attack="100" defense="60" speed="20" CanBlock="True" CanDodge="True" CanRetaliate="True" Energy="50" exp="18" />
+      <Entity name="Leprachan" id="1" attack="90" defense="20" HP="30" speed="30" CanBlock="False" CanDodge="True" CanRetaliate="True" Energy="30" exp="17" />
+      <Entity name="Dwarf" id="2" HP="70" attack="80" defense="10" speed="20" CanBlock="False" CanDodge="True" CanRetaliate="True" Energy="40" exp="14" />
+      <Entity name="Leprachan" id="3" attack="70" defense="40" HP="20" speed="20" CanBlock="True" CanDodge="False" CanRetaliate="False" Energy="30" exp="13" />
+    </Room_7>
+    <Room_6 length="3" width="3">
+      <Entity name="Leprachan" id="0" attack="20" defense="30" HP="40" speed="30" CanBlock="True" CanDodge="True" CanRetaliate="False" Energy="30" exp="8" />
+      <Entity name="Leprachan" id="1" attack="80" defense="60" HP="60" speed="30" CanBlock="False" CanDodge="True" CanRetaliate="True" Energy="30" exp="17" />
+      <Entity name="Dwarf" id="2" HP="40" attack="80" defense="60" speed="20" CanBlock="True" CanDodge="True" CanRetaliate="False" Energy="50" exp="14" />
+      <Entity name="Leprachan" id="3" attack="100" defense="80" HP="30" speed="20" CanBlock="True" CanDodge="True" CanRetaliate="False" Energy="30" exp="20" />
+      <Entity name="Leprachan" id="4" attack="20" defense="100" HP="40" speed="10" CanBlock="True" CanDodge="False" CanRetaliate="False" Energy="30" exp="8" />
+      <Entity name="Dwarf" id="5" HP="60" attack="100" defense="20" speed="30" CanBlock="False" CanDodge="False" CanRetaliate="False" Energy="10" exp="25" />
+    </Room_6>
+    <Room_5 length="3" width="3">
+      <Chest exp="50">
+        <contents>
+          <weapon name="Brass Arrow" amount="45" attack="1" durability="2" />
+          <weapon name="Gold Mace" attack="1" durability="1" />
+          <money Amount="49 Gold" />
+          <book name="Book of Class" />
+          <money Amount="60 Copper" />
+          <weapon name="Gold Bow" attack="2" durability="1" />
+          <money Amount="22 Copper" />
+          <book name="Book of Skills" />
+          <weapon name="Silver Arrow" amount="25" attack="1" durability="2" />
+          <money Amount="74 Gold" />
+        </contents>
+      </Chest>
+    </Room_5>
+    <Room_4 length="3" width="3">
+      <Chest exp="50">
+        <contents>
+          <money Amount="80 Platinum" />
+          <money Amount="62 Platinum" />
+          <book name="Book of Skills" />
+          <money Amount="37 silver" />
+          <money Amount="29 Gold" />
+          <weapon name="Bronze Arrow" amount="94" attack="2" durability="1" />
+          <book name="Book of Class" />
+          <money Amount="16 Electrum" />
+          <book name="The Almighty Book" />
+          <weapon name="Bronze Bow" attack="2" durability="2" />
+        </contents>
+      </Chest>
+    </Room_4>
+    <Room_3 length="3" width="3">
+      <Chest exp="50">
+        <contents>
+          <money Amount="57 Platinum" />
+          <book name="Book of Attributes" />
+          <weapon name="Tin Dagger" attack="1" durability="2" />
+          <book name="The Almighty Book" />
+          <book name="The Almighty Book" />
+          <book name="Book of Class" />
+          <money Amount="62 silver" />
+          <money Amount="82 silver" />
+          <book name="Book of Skills" />
+          <book name="Book of Attributes" />
+        </contents>
+      </Chest>
+    </Room_3>
+    <Room_2 length="3" width="3">
+      <Chest exp="50">
+        <contents>
+          <book name="Book of Attributes" />
+          <weapon name="Bronze Arrow" amount="62" attack="1" durability="1" />
+          <weapon name="Copper Saber" attack="2" durability="2" />
+          <money Amount="92 Copper" />
+          <money Amount="37 Platinum" />
+          <book name="Book of Class" />
+          <weapon name="Brass Mace" attack="1" durability="1" />
+          <book name="The Almighty Book" />
+          <money Amount="27 Electrum" />
+          <money Amount="10 Copper" />
+        </contents>
+      </Chest>
+    </Room_2>
+  </Dungeon05162021172412>
+</Dungeons>
