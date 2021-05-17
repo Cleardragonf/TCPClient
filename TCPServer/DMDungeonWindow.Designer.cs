@@ -30,7 +30,6 @@ namespace TCPServer
         private void InitializeComponent()
         {
             this.btnCreate = new System.Windows.Forms.Button();
-            this.btnLoad = new System.Windows.Forms.Button();
             this.grpbxDungeonCreation = new System.Windows.Forms.GroupBox();
             this.btnCreateDungeon = new System.Windows.Forms.Button();
             this.drpDungeonLocation = new System.Windows.Forms.ComboBox();
@@ -49,6 +48,9 @@ namespace TCPServer
             this.label8 = new System.Windows.Forms.Label();
             this.txtRoomWidth = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.drpbxLoadDungeon = new System.Windows.Forms.ComboBox();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.btnOk = new System.Windows.Forms.Button();
             this.grpbxDungeonCreation.SuspendLayout();
             this.grpbxCreateRooms.SuspendLayout();
             this.SuspendLayout();
@@ -63,15 +65,6 @@ namespace TCPServer
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
-            // btnLoad
-            // 
-            this.btnLoad.Location = new System.Drawing.Point(160, 51);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(75, 23);
-            this.btnLoad.TabIndex = 1;
-            this.btnLoad.Text = "Load";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            // 
             // grpbxDungeonCreation
             // 
             this.grpbxDungeonCreation.Controls.Add(this.btnCreateDungeon);
@@ -83,7 +76,7 @@ namespace TCPServer
             this.grpbxDungeonCreation.Controls.Add(this.label3);
             this.grpbxDungeonCreation.Controls.Add(this.txtNumberOfMonsters);
             this.grpbxDungeonCreation.Controls.Add(this.label2);
-            this.grpbxDungeonCreation.Location = new System.Drawing.Point(12, 126);
+            this.grpbxDungeonCreation.Location = new System.Drawing.Point(12, 159);
             this.grpbxDungeonCreation.Name = "grpbxDungeonCreation";
             this.grpbxDungeonCreation.Size = new System.Drawing.Size(262, 202);
             this.grpbxDungeonCreation.TabIndex = 2;
@@ -248,11 +241,43 @@ namespace TCPServer
             this.label9.TabIndex = 2;
             this.label9.Text = "Width";
             // 
+            // drpbxLoadDungeon
+            // 
+            this.drpbxLoadDungeon.FormattingEnabled = true;
+            this.drpbxLoadDungeon.Location = new System.Drawing.Point(13, 81);
+            this.drpbxLoadDungeon.Name = "drpbxLoadDungeon";
+            this.drpbxLoadDungeon.Size = new System.Drawing.Size(222, 23);
+            this.drpbxLoadDungeon.TabIndex = 13;
+            this.drpbxLoadDungeon.Visible = false;
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(160, 51);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(75, 23);
+            this.btnLoad.TabIndex = 1;
+            this.btnLoad.Text = "Load";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // btnOk
+            // 
+            this.btnOk.Location = new System.Drawing.Point(81, 110);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(75, 23);
+            this.btnOk.TabIndex = 14;
+            this.btnOk.Text = "Ok";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Visible = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            // 
             // DMDungeonWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 373);
+            this.Controls.Add(this.btnOk);
+            this.Controls.Add(this.drpbxLoadDungeon);
             this.Controls.Add(this.grpbxCreateRooms);
             this.Controls.Add(this.grpbxDungeonCreation);
             this.Controls.Add(this.btnLoad);
@@ -272,7 +297,6 @@ namespace TCPServer
         #endregion
 
         private System.Windows.Forms.Button btnCreate;
-        private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.GroupBox grpbxDungeonCreation;
         private System.Windows.Forms.Button btnCreateDungeon;
         private System.Windows.Forms.ComboBox drpDungeonLocation;
@@ -291,6 +315,9 @@ namespace TCPServer
         private System.Windows.Forms.GroupBox grpbxCreateRooms;
         private System.Windows.Forms.TextBox txtRemainingRooms;
         private System.Windows.Forms.Label lblRemainingRooms;
+        private System.Windows.Forms.ComboBox drpbxLoadDungeon;
+        private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.Button btnOk;
     }
 }
 

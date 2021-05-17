@@ -108,5 +108,28 @@ namespace TCPServer
 
 
         }
+
+        public XmlNode Dungeon;
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            XmlNode listOfDungeons = doc.SelectSingleNode(@"/Dungeons");
+            foreach (XmlNode node in listOfDungeons)
+            {
+                drpbxLoadDungeon.Items.Add(node.Name);
+            }
+            btnCreate.Visible = false;
+            btnLoad.Visible = false;
+            drpbxLoadDungeon.Visible = true;
+            btnOk.Visible = true;
+            
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            Dungeon = doc.SelectSingleNode(@"/Dungeons/" + drpbxLoadDungeon.SelectedItem.ToString());
+            this.Close();
+            InteractiveDungeonWindow form = new InteractiveDungeonWindow(Dungeon);
+            form.Show();
+        }
     }
 }

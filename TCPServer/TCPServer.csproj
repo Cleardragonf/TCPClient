@@ -18,6 +18,9 @@
     <Compile Update="DMDungeonWindow.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="InteractiveDungeonWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
