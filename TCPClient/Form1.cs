@@ -84,5 +84,11 @@ namespace TCPClient
                 txtInfo.Text += $"Server Connected.{Environment.NewLine}";
             });
         }
+
+        private void btnCharacterSheet_Click(object sender, EventArgs e)
+        {
+            CharacterSheet form = new CharacterSheet();
+            form.Show();
+        }
     }
 }
