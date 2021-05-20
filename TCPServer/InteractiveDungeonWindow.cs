@@ -22,7 +22,7 @@ namespace TCPServer
             Dungeon = dungeon;
         }
         public XmlNode Dungeon;
-        public int HexHeight = 25;
+        public int HexHeight = 60;
         public List<PointF> Hexagons = new List<PointF>();
         public bool createDoor = false;
         protected override CreateParams CreateParams
@@ -73,7 +73,7 @@ namespace TCPServer
             return (float)(4 * (height / 2 / Math.Sqrt(3)));
         }
 
-        // Draw a hexagonal grid for the indicated area.
+        // Draw fa hexagonal grid for the indicated area.
         // (You might be able to draw the hexagons without
         // drawing any duplicate edges, but this is a lot easier.)
         private void DrawHexGrid(Graphics gr, Pen pen,
@@ -103,20 +103,17 @@ namespace TCPServer
                     if (points[4].Y <= ymax)
                     {
                         gr.DrawPolygon(pen, points);
+                        gr.DrawString(col + " " + row, new Font("Arial", 10), new SolidBrush(Color.Black), points[0]);
                     }
                 }
             }
         }
 
+
+
         // Redraw the grid.
         private void picGrid_Paint(object sender, PaintEventArgs e)
         {
-            if (createDoor)
-            {
-                Graphics g = e.Graphics;
-                g.DrawLine(Pens.Blue, ptFrom, ptTo);
-            }
-
                 e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
                 // Draw the selected hexagons.
@@ -136,7 +133,14 @@ namespace TCPServer
                 {
                     e.Graphics.DrawRectangle(Pens.Black, rectangle);
                 }
-            
+
+            Graphics g = e.Graphics;
+            foreach (Line line in firstLines)
+            {
+                g.DrawLine(new Pen(Color.Blue, 10), line.From, line.To);
+            }
+
+
         }
 
         // Return the row and column of the hexagon at this point.
@@ -249,19 +253,34 @@ namespace TCPServer
             int positionX = 0;
             foreach (XmlNode room in Dungeon)
             {
+
                 if(i == 0)
                 {
-                    var rectangle = new Rectangle(0, 0, int.Parse(room.Attributes["width"].Value) * HexHeight, int.Parse(room.Attributes["length"].Value) * HexHeight);
+                    var rectangle = new Rectangle(0, 0, int.Parse(room.Attributes["width"].Value) * (int)HexWidth(HexHeight), int.Parse(room.Attributes["length"].Value) * HexHeight);
                     this._rectangles.Add(rectangle);
-                    positionX += int.Parse(room.Attributes["width"].Value) * HexHeight;
+                    positionX = (int.Parse(room.Attributes["width"].Value) * (int)HexWidth(HexHeight));
+                    foreach (XmlNode entity in room)
+                    {
+                        if (entity.Name.Contains("Entity"))
+                        {
+
+                        }
+                    }
                 }
                 else
                 {
                     int reqIndex = i - 1;
                     
-                    var rectangle = new Rectangle(positionX, 0, int.Parse(room.Attributes["width"].Value) * HexHeight, int.Parse(room.Attributes["length"].Value) * HexHeight);
+                    var rectangle = new Rectangle(positionX, 0, int.Parse(room.Attributes["width"].Value) * (int)HexWidth(HexHeight), int.Parse(room.Attributes["length"].Value) * HexHeight);
                     this._rectangles.Add(rectangle);
-                    positionX += int.Parse(room.Attributes["width"].Value) * HexHeight;
+                    positionX = positionX + (int.Parse(room.Attributes["width"].Value) * (int)HexWidth(HexHeight));
+                            foreach (XmlNode entity in room)
+                {
+                    if (entity.Name.Contains("Entity"))
+                    {
+                       
+                    }
+                }
                 }
                 i++;
             }
@@ -271,36 +290,99 @@ namespace TCPServer
 
         //below is part of painting a line from one location to another....(for making doors and such)
 
+
+
+
+        class Line
+        {
+            public Point From, To;
+
+        }
         Point ptFrom, ptTo;
+        List<Line> firstLines = new List<Line>();
 
         private void pnlDungeonBoard_MouseDown(object sender, MouseEventArgs e)
         {
-            if(e.Button == MouseButtons.Left)
+            if (createDoor || moveEntityBool)
             {
-                ptFrom = e.Location;
+                if (e.Button == MouseButtons.Left)
+                {
+
+                    ptFrom = e.Location;
+                }
+            }
+            else
+            {
+                
+
+            }
+            
+        }
+
+        private void ToggleOptions(object sender, EventArgs e)
+        {
+            Button Sender = (Button)sender;
+            if(Sender.Text.Contains("Create Door")){
+                createDoor = true;
+                moveEntityBool = false;
+            }
+            else
+            {
+                createDoor = false;
+                moveEntityBool = true;
             }
         }
 
 
+        private void pnlDungeonBoard_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (createDoor)
+            {
+                if (e.Button == MouseButtons.Left)
+                {
+                    ptTo = e.Location;
+                    Line ln = new Line();
+                    ln.From = ptFrom;
+                    ln.To = ptTo;
+                    firstLines.Add(ln);
+                    Invalidate();
+                }
+            }
+            else if(moveEntityBool)
+            {
+                
+            }
+
+        }
         private void btnCreateDoors_Click(object sender, EventArgs e)
         {
             if (createDoor)
             {
                 createDoor = false;
+                lblDoorCreated.Text = "disabled";
             }
             else
             {
                 createDoor = true;
+                lblDoorCreated.Text = "enabled";
             }
 
         }
 
-        private void pnlDungeonBoard_MouseUp(object sender, MouseEventArgs e)
+
+        public bool moveEntityBool = false;
+        private void bntMoveEntity_Click(object sender, EventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            if (moveEntityBool)
             {
-                ptTo = e.Location;
-                Invalidate();
+                moveEntityBool = false;
+                lblMoveEntity.Text = "disabled";
+
+            }
+            else
+            {
+                moveEntityBool = true;
+                lblMoveEntity.Text = "enabled";
             }
         }
     }

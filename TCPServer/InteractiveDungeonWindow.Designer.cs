@@ -31,6 +31,10 @@ namespace TCPServer
         {
             this.pnlDungeonBoard = new System.Windows.Forms.Panel();
             this.pnlCommandWindow = new System.Windows.Forms.Panel();
+            this.lblMoveEntity = new System.Windows.Forms.Label();
+            this.bntMoveEntity = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblDoorCreated = new System.Windows.Forms.Label();
             this.btnCreateDoors = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCreateRoom = new System.Windows.Forms.Button();
@@ -55,6 +59,10 @@ namespace TCPServer
             // 
             // pnlCommandWindow
             // 
+            this.pnlCommandWindow.Controls.Add(this.lblMoveEntity);
+            this.pnlCommandWindow.Controls.Add(this.bntMoveEntity);
+            this.pnlCommandWindow.Controls.Add(this.label5);
+            this.pnlCommandWindow.Controls.Add(this.lblDoorCreated);
             this.pnlCommandWindow.Controls.Add(this.btnCreateDoors);
             this.pnlCommandWindow.Controls.Add(this.label3);
             this.pnlCommandWindow.Controls.Add(this.btnCreateRoom);
@@ -67,9 +75,48 @@ namespace TCPServer
             this.pnlCommandWindow.Size = new System.Drawing.Size(277, 784);
             this.pnlCommandWindow.TabIndex = 1;
             // 
+            // lblMoveEntity
+            // 
+            this.lblMoveEntity.AutoSize = true;
+            this.lblMoveEntity.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblMoveEntity.Location = new System.Drawing.Point(104, 353);
+            this.lblMoveEntity.Name = "lblMoveEntity";
+            this.lblMoveEntity.Size = new System.Drawing.Size(52, 15);
+            this.lblMoveEntity.TabIndex = 10;
+            this.lblMoveEntity.Text = "disabled";
+            // 
+            // bntMoveEntity
+            // 
+            this.bntMoveEntity.Location = new System.Drawing.Point(165, 349);
+            this.bntMoveEntity.Name = "bntMoveEntity";
+            this.bntMoveEntity.Size = new System.Drawing.Size(103, 23);
+            this.bntMoveEntity.TabIndex = 9;
+            this.bntMoveEntity.Text = "Move Entity";
+            this.bntMoveEntity.UseVisualStyleBackColor = true;
+            this.bntMoveEntity.Click += new System.EventHandler(this.bntMoveEntity_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(10, 353);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 15);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Move Entity";
+            // 
+            // lblDoorCreated
+            // 
+            this.lblDoorCreated.AutoSize = true;
+            this.lblDoorCreated.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblDoorCreated.Location = new System.Drawing.Point(104, 324);
+            this.lblDoorCreated.Name = "lblDoorCreated";
+            this.lblDoorCreated.Size = new System.Drawing.Size(52, 15);
+            this.lblDoorCreated.TabIndex = 7;
+            this.lblDoorCreated.Text = "disabled";
+            // 
             // btnCreateDoors
             // 
-            this.btnCreateDoors.Location = new System.Drawing.Point(165, 63);
+            this.btnCreateDoors.Location = new System.Drawing.Point(165, 320);
             this.btnCreateDoors.Name = "btnCreateDoors";
             this.btnCreateDoors.Size = new System.Drawing.Size(103, 23);
             this.btnCreateDoors.TabIndex = 6;
@@ -80,7 +127,7 @@ namespace TCPServer
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 67);
+            this.label3.Location = new System.Drawing.Point(10, 324);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 15);
             this.label3.TabIndex = 5;
@@ -159,6 +206,10 @@ namespace TCPServer
         private System.Windows.Forms.Label lblRemainingRooms;
         private System.Windows.Forms.Button btnCreateDoors;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDoorCreated;
+        private System.Windows.Forms.Label lblMoveEntity;
+        private System.Windows.Forms.Button bntMoveEntity;
+        private System.Windows.Forms.Label label5;
     }
 }
 
